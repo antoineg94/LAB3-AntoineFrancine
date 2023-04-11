@@ -11,13 +11,13 @@ public class UIManager : MonoBehaviour
     private bool _enPause;
     private GestionJeu _gestionJeu;
 
-
     void Start()
     {
         _gestionJeu = FindObjectOfType<GestionJeu>();
         _txtAccrochages.text = "Accrochages : " + _gestionJeu.GetPointage();
         Time.timeScale = 1;
         _enPause = false;
+      
     }
 
 
@@ -41,6 +41,8 @@ public class UIManager : MonoBehaviour
             EnleverPause();
         }
     }
+
+
 
     public void ChangerPointage(int p_pointage)
     {
