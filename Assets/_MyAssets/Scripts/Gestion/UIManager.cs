@@ -10,19 +10,30 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _menuPause = default;
     private bool _enPause;
     private GestionJeu _gestionJeu;
-
+    float temps;
 
     void Start()
     {
         _gestionJeu = FindObjectOfType<GestionJeu>();
         _txtAccrochages.text = _gestionJeu.GetPointage().ToString();
-        Time.timeScale = 1;
+         Time.timeScale = 1;
+        
+      // temps = _gestionJeu.GetTempsDepart();
         _enPause = false;
     }
 
 
     private void Update()
     {
+        Time.timeScale = 0;
+        if (this.gameObject.transform.hasChanged)
+        {
+            Time.timeScale = 1;
+          //  temps = Time.time- _gestionJeu.GetTempsDepart();
+        }
+        else
+            Time.timeScale = 0;
+        //temps = 0;
         float temps = Time.time - _gestionJeu.GetTempsDepart();
         _txtTemps.text = temps.ToString("f2");
         GestionPause();

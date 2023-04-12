@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GestionJeu : MonoBehaviour
 {
     // ***** Attributs *****
@@ -10,6 +11,8 @@ public class GestionJeu : MonoBehaviour
     private int _pointage = 0;  // Attribut qui conserve le nombre d'accrochages
     private float _tempsFinal = 0;
     private float _tempsDepart = 0;
+    private Rigidbody _rb;
+  
     //private int _accrochageNiveau1 = 0;  // Atribut qui conserve le nombre d'accrochage pour le niveau 1
     //private float _tempsNiveau1 = 0.0f;  // Attribut qui conserve le temps pour le niveau 1
 
@@ -30,9 +33,52 @@ public class GestionJeu : MonoBehaviour
         }
     }
 
+    //Vector3 departnv1 = new Vector3(0f, 0.1f, 0f);
     private void Start()
     {
+        _tempsDepart = 0;
+
+
+
+        /*
+         * 
+            private Vector3 position = transform.position;
+
+
+
+                if (SceneManager.GetActiveScene().name == "Niveau1")
+                {
+                    transform.position = new Vector3(0f, 0.1f, 0f);
+                    if (transform.hasChanged)
+                    {
+                        _tempsDepart = Time.time;
+                    }
+                    else
+                    {
+                        _tempsDepart = 0;
+                    }
+                }
+
+
+                /*
+                        if( (SceneManager.GetActiveScene().name == "Niveau1") &&(gameObject.transform.position == departnv1))
+                        {
+                            _tempsDepart = 0; 
+                        }
+                        else if((SceneManager.GetActiveScene().name == "Niveau1") && (gameObject.transform.position != departnv1))
+                        { _tempsDepart = Time.time;
+                        }*/
+        /*if (SceneManager.GetActiveScene().name == "Niveau2")
+        {
+            transform.position = new Vector3(-40f, 0.1f, -40f);
+        }
+        if (SceneManager.GetActiveScene().name == "Niveau3")
+        {
+            transform.position = new Vector3(40f, 0.1f, -40f);
+        }
         _tempsDepart = Time.time;
+        _rb = GetComponent<Rigidbody>();*/
+
         /*   float positionX = Input.GetAxis("Horizontal");
            float positionZ = Input.GetAxis("Vertical");
         */
