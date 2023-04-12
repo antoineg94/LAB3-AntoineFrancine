@@ -36,7 +36,7 @@ public class GestionJeu : MonoBehaviour
     //Vector3 departnv1 = new Vector3(0f, 0.1f, 0f);
     private void Start()
     {
-        _tempsDepart = 0;
+        _tempsDepart = Time.time;
 
 
 
