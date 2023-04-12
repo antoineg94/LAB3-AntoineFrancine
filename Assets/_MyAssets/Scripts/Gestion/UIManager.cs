@@ -43,7 +43,10 @@ public class UIManager : MonoBehaviour
 
     public void gestionTemps()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.Up) || Input.GetKeyDown(KeyCode.Down) || Input.GetKeyDown(KeyCode.Left) || Input.GetKeyDown(KeyCode.Right))
+        {
+            _keyDown = true;
+        }
         {
             _keyDown = true;
 
