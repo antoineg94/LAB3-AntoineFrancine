@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
 
     
     
-    private void Update()
+    private void FixedUpdate()
     {
         gestionTemps();
         if (_keyDown == true)
@@ -48,8 +48,6 @@ public class UIManager : MonoBehaviour
             _keyDown = true;
 
         }
-
-    
     }
 
 
