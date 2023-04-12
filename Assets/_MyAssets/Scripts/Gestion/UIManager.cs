@@ -18,21 +18,14 @@ public class UIManager : MonoBehaviour
         _txtAccrochages.text = _gestionJeu.GetPointage().ToString();
          Time.timeScale = 1;
         
-      // temps = _gestionJeu.GetTempsDepart();
         _enPause = false;
     }
 
 
     private void Update()
     {
-        Time.timeScale = 0;
-        if (this.gameObject.transform.hasChanged)
-        {
-            Time.timeScale = 1;
-          //  temps = Time.time- _gestionJeu.GetTempsDepart();
-        }
-        else
-            Time.timeScale = 0;
+        
+     
         //temps = 0;
         float temps = Time.time - _gestionJeu.GetTempsDepart();
         _txtTemps.text = temps.ToString("f2");
