@@ -43,13 +43,9 @@ public class UIManager : MonoBehaviour
 
     public void gestionTemps()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.Up) || Input.GetKeyDown(KeyCode.Down) || Input.GetKeyDown(KeyCode.Left) || Input.GetKeyDown(KeyCode.Right))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             _keyDown = true;
-        }
-        {
-            _keyDown = true;
-
         }
     }
 
