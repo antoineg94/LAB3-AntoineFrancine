@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
 
     
     
-    private void FixedUpdate()
+    private void Update()
     {
         gestionTemps();
         if (_keyDown == true)
@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !_enPause)
         {
             _menuPause.SetActive(true);
-            Time.timeScale = 0;
+           Time.timeScale = 0;
             _enPause = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && _enPause)
