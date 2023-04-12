@@ -6,29 +6,36 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text _txtAccrochages = default;
-    [SerializeField] private TMP_Text _txtTemps = default;
+    [SerializeField] private TMP_Text _txtTemps;
     [SerializeField] private GameObject _menuPause = default;
     private bool _enPause;
     private GestionJeu _gestionJeu;
     float temps;
 
+    float currentTime;
+  
+    
     void Start()
     {
         _gestionJeu = FindObjectOfType<GestionJeu>();
         _txtAccrochages.text = _gestionJeu.GetPointage().ToString();
-         Time.timeScale = 1;
         
         _enPause = false;
+        currentTime = 0;
     }
+
 
 
     private void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            currentTime += Time.deltaTime;
+            _txtTemps.text = currentTime.ToString("f2");
+        }
         
-     
-        //temps = 0;
-        float temps = Time.time - _gestionJeu.GetTempsDepart();
-        _txtTemps.text = temps.ToString("f2");
+       
         GestionPause();
     }
 
