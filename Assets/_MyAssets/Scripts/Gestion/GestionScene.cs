@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GestionScene : MonoBehaviour
 {
- 
+    [SerializeField] private GameObject _menuInfo = default;
+    private bool _enInfo;
+
     public void ChangerSceneSuivante()
     {
-        int noScene = SceneManager.GetActiveScene().buildIndex; // Récupère l'index de la scène en cours
+        int noScene = SceneManager.GetActiveScene().buildIndex; // Rï¿½cupï¿½re l'index de la scï¿½ne en cours
         SceneManager.LoadScene(noScene + 1);
     }
 
@@ -17,14 +19,22 @@ public class GestionScene : MonoBehaviour
     {
         Application.Quit();
     }
-
+    
     public void ChargerSceneDepart()
     {
         SceneManager.LoadScene(1);
     }
-    public void infos()
+    public void GestionInfo()
     {
-        SceneManager.LoadScene(5);
+            _menuInfo.SetActive(true);
+            _enInfo = true;
+        
+    }
+    public void FermerInfo()
+    {
+        _menuInfo.SetActive(false);
+        _enInfo = false;
+
     }
     public void Menu()
     {
