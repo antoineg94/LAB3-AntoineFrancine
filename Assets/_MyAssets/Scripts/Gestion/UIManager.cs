@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     float temps;
 
     float currentTime;
-  
+    bool _keyDown = false;
     
     void Start()
     {
@@ -22,22 +22,36 @@ public class UIManager : MonoBehaviour
         
         _enPause = false;
         currentTime = 0;
+        
     }
 
-
-
+    
+    
     private void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.W))
+        gestionTemps();
+        if (_keyDown == true)
         {
+
             currentTime += Time.deltaTime;
             _txtTemps.text = currentTime.ToString("f2");
+
         }
-        
-       
+
         GestionPause();
     }
+
+    public void gestionTemps()
+    {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        {
+            _keyDown = true;
+
+        }
+
+    
+    }
+
 
     private void GestionPause()
     {
