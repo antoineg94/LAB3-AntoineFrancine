@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.112645224, g: 0.28144765, b: 0.7086892, a: 1}
+  m_IndirectSpecularColor: {r: 0.112726726, g: 0.28158873, b: 0.7091778, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1089,8 +1089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 527.7167, y: 410.45984}
-  m_SizeDelta: {x: 386.7675, y: 112.1994}
+  m_AnchoredPosition: {x: 793, y: 416}
+  m_SizeDelta: {x: 112, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97391421
 MonoBehaviour:
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 4
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7716,6 +7716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a0249f55b290f4eac1b9340f5dfe21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _menuInfo: {fileID: 0}
 --- !u!1001 &1087114488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7917,8 +7918,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 523.8638, y: 477.13904}
-  m_SizeDelta: {x: 737.2188, y: 90.2319}
+  m_AnchoredPosition: {x: 780.2468, y: 401.9923}
+  m_SizeDelta: {x: 224.4525, y: 240.5254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123354307
 MonoBehaviour:
@@ -7940,7 +7941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Accrochages : 0000'
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 359eda1ea86e60e44ab0e216562f87b0, type: 2}
   m_sharedMaterial: {fileID: -4605003222803513114, guid: 359eda1ea86e60e44ab0e216562f87b0, type: 2}
@@ -8003,7 +8004,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -25.068604, w: -147.90564}
+  m_margin: {x: 2.9466553, y: 0, z: -19.174683, w: -3.5059204}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12485,6 +12486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a0249f55b290f4eac1b9340f5dfe21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _menuInfo: {fileID: 0}
 --- !u!114 &1765301936
 MonoBehaviour:
   m_ObjectHideFlags: 0
